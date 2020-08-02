@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(Versions.TARGET_ANDROID_SDK)
 
     defaultConfig {
-        minSdkVersion(23)
-        targetSdkVersion(29)
+        minSdkVersion(Versions.MIN_ANDROID_SDK)
+        targetSdkVersion(Versions.TARGET_ANDROID_SDK)
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -19,6 +19,10 @@ android {
 
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        dataBinding = true
     }
 
 }
